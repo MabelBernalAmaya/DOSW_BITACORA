@@ -41,8 +41,8 @@ Primero convertimos la lista en un Stream con .stream().
 Luego aplicamos .filter() dos veces: el primer filtro selecciona los números pares (n % 2 == 0) y el segundo filtro selecciona los números mayores a 10 (n > 10).
 Por último, .collect(Collectors.toList()) convierte el resultado en una lista.
 
-Ejercicio 02 – Cantidad de Palabras con más de 4 caracteres
-Enunciado: Dada una lista de palabras, filtrar las que tengan más de 4 caracteres, convertirlas a mayúsculas, ordenarlas alfabéticamente y mostrar la cantidad total.
+## Ejercicio 02 – Cantidad de palabras con mas de 4 caracteres 
+**Enunciado:** Dada una lista de palabras, filtrar las que tengan más de 4 caracteres, convertirlas a mayúsculas, ordenarlas alfabéticamente y mostrar la cantidad total.
 
 
 Código implementado:
