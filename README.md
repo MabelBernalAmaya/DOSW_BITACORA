@@ -1,5 +1,3 @@
-
-```markdown
 # SEMANA No 1 – DOSW Manejo de Streams
 
 ## Datos personales:
@@ -9,9 +7,9 @@
 
 ---
 
-### Ejercicio 01 – Números Pares mayores a diez
+## Ejercicio 01 – Números Pares mayores a diez
 
-**Enunciado:** Dada una lista de números enteros, obtener solo los pares mayores a 10.
+**Enunciado:** Dada una lista de números enteros, obtener solo los pares mayores a diez.
 
 **Código implementado:**
 
@@ -33,13 +31,12 @@ public class Ejercicio1 {
         System.out.println("Números pares mayores a 10: " + resultado);
     }
 }
-Captura de ejecucion:
+Captura de ejecución:
 
-https://evidencias/ejercicio1.png
+h![Ejercicio 1](evidencias/ejercicio1.png)
 
-Explicacion:
+Explicación:
 
 Primero convertimos la lista en un Stream con .stream().
-Luego aplicamos .filter() dos veces: el primer filtro selecciona los números pares (n % 2 == 0)
-y el segundo filtro selecciona los números mayores a 10 (n > 10).
-Por último, .collect(Collectors.toList()) convierte el resultado nuevamente en una lista.
+Luego aplicamos .filter() dos veces: el primer filtro selecciona los números pares (n % 2 == 0) y el segundo filtro selecciona los números mayores a 10 (n > 10).
+Por último, .collect(Collectors.toList()) convierte el resultado en una lista
