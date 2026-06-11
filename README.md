@@ -33,21 +33,19 @@ public class Ejercicio1 {
 }
 **Captura de ejecución:**
 
-h![Ejercicio 1](evidencias/ejercicio1.png)
+https://evidencias/ejercicio1.png
 
 **Explicación:**
 
 Primero convertimos la lista en un Stream con .stream().
 Luego aplicamos .filter() dos veces: el primer filtro selecciona los números pares (n % 2 == 0) y el segundo filtro selecciona los números mayores a 10 (n > 10).
-Por último, .collect(Collectors.toList()) convierte el resultado en una lista. 
+Por último, .collect(Collectors.toList()) convierte el resultado en una lista.
 
-## Ejercicio 02 – Cantidad de Palabras con más de 4 caracteres
+Ejercicio 02 – Cantidad de Palabras con más de 4 caracteres
+Enunciado: Dada una lista de palabras, filtrar las que tengan más de 4 caracteres, convertirlas a mayúsculas, ordenarlas alfabéticamente y mostrar la cantidad total.
 
-**Enunciado:** Dada una lista de palabras, filtrar las que tengan más de 4 caracteres, convertirlas a mayúsculas, ordenarlas alfabéticamente y mostrar la cantidad total.
 
-**Código implementado:**
-
-```java
+Código implementado:
 package dosw.semana_1.streams;
 
 import java.util.List;
@@ -65,10 +63,10 @@ public class Ejercicio2 {
         System.out.println("Cantidad de palabras resultantes: " + cantidad);
     }
 }
-
-**Captura de ejecución:**
+Captura de ejecución:
 
 https://evidencias/ejercicio2.png
 
-**Explicación:** 
+Explicación:
+
 Primero convertimos la lista en un Stream con .stream(). Luego usamos .filter() para quedarnos solo con las palabras que tienen más de 4 letras (descartamos "java", "api", "code", "git"). Después .map() las convierte a mayúsculas, .sorted() las ordena alfabéticamente y .count() cuenta cuántas quedaron. El resultado es 2 porque solo "stream" y "functional" cumplen la condición.
