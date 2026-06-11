@@ -31,8 +31,7 @@ public class Ejercicio1 {
 }
 
 **Captura de ejecucion:**
-![Ejercicio 1](evidencias/
-ejercicio1.png)
+![Ejercicio 1](evidencias/ejercicio1.png)
 
 
 **Explicacion:**. Primero convertimos  la lista en un Stream con .stream().
