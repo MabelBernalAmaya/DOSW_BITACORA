@@ -29,4 +29,9 @@ public class Pokemon {
     public String getTipo() { return tipo; }
     public int getNivel() { return nivel; }
     public double getPoderCombate() { return poderCombate; }
+
+    public Object isPuedeEvolucionar() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isPuedeEvolucionar'");
+    }
 }
