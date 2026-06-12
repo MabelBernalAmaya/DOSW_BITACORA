@@ -33,7 +33,7 @@ public class Ejercicio1 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 1](evidencias/s1_ejercicio1.png)
+**Captura de ejecución:** ![Ejercicio 1](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/S1_ejercicio.png)
 
 **Explicación:** Usé `.stream()` para convertir la lista en un flujo de datos. Después apliqué `.filter()` dos veces: una para quedarme con los números pares y otra para los mayores a 10. Al final `.collect()` junta los resultados en una lista nueva.
 
@@ -120,7 +120,7 @@ public class Ejercicio3 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 3](evidencias/s1_ejercicio3.png)
+**Captura de ejecución:** ![Ejercicio 3](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s1_ejercicio3.png)
 
 **Explicación:** Con `.filter()` me quedé solo con los usuarios que tienen `active = true`. Después `.map()` convierte cada nombre a mayúsculas, `.sorted()` los ordena de A a Z y `.collect()` arma la lista final.
 
@@ -174,7 +174,7 @@ public class Ejercicio4 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 4](evidencias/s1_ejercicio4.png)
+**Captura de ejecución:** ![Ejercicio 4](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s1_ejercicio4.png)
 
 **Explicación:** Usé `.filter()` para comparar la edad de cada usuario con 18. Los que pasan el filtro se les extrae el nombre con `.map()` y al final `.collect()` los agrupa en una lista.
 
@@ -227,7 +227,7 @@ public class Ejercicio5 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 5](evidencias/s1_ejercicio5.png)
+**Captura de ejecución:** ![Ejercicio 5](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s1_ejercicio5.png)
 
 **Explicación:** `.peek()` me sirvió para ver por consola cada transacción mientras el Stream la procesa, sin cambiar nada. Después `.anyMatch()` revisa si hay alguna con `approved = false`. Si encuentra una, el lote no es válido, por eso imprimo el negado `!hayNoAprobada`.
 
@@ -276,7 +276,7 @@ public class Ejercicio1 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 1](evidencias/s2_ejercicio1.png)
+**Captura de ejecución:** ![Ejercicio 1](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio1.png)
 
 **Explicación:** Con `.filter()` comparo el tipo de cada Pokémon contra "Fuego" y descarto los demás. Luego `.map()` saca solo el nombre y `.collect()` arma la lista final.
 
@@ -308,7 +308,7 @@ public class Ejercicio2 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 2](evidencias/s2_ejercicio2.png)
+**Captura de ejecución:** ![Ejercicio 2](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio2.png)
 
 **Explicación:** Solo usé `.map()` para aplicarle `toUpperCase()` a cada nombre. Es el ejercicio más directo de todos, no necesita filtrar nada.
 
@@ -338,7 +338,7 @@ public class Ejercicio3 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 3](evidencias/s2_ejercicio3.png)
+**Captura de ejecución:** ![Ejercicio 3](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio3.png)
 
 **Explicación:** Usé `.reduce()` que va acumulando la suma de a un número por vez, empezando desde 0. Al recorrer toda la lista termina con el total, que en este caso es 300.
 
@@ -424,7 +424,7 @@ public class Ejercicio5 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 5](evidencias/s2_ejercicio5.png)
+**Captura de ejecución:** ![Ejercicio 5](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio5.png)
 
 **Explicación:** Hice dos Streams sobre la misma lista: uno para contar con `.count()` y otro para sacar los nombres con `.map()`. Los dos aplican el mismo `.filter()` de nivel mayor a 80.
 
@@ -459,7 +459,7 @@ public class Ejercicio6 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 6](evidencias/s2_ejercicio6.png)
+**Captura de ejecución:** ![Ejercicio 6](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio6.png)
 
 **Explicación:** `.distinct()` se encarga solo de eliminar los duplicados, conserva la primera aparición de cada elemento y descarta las repetidas.
 
@@ -494,7 +494,7 @@ public class Ejercicio7 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 7](evidencias/s2_ejercicio7.png)
+**Captura de ejecución:** ![Ejercicio 7](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio7.png)
 
 **Explicación:** `.sorted()` sin argumentos ordena los String de forma alfabética natural. La lista queda de Abra hasta Squirtle.
 
@@ -573,7 +573,7 @@ public class Ejercicio9 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 9](evidencias/s2_ejercicio9.png)
+**Captura de ejecución:** ![Ejercicio 9](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio9.png)
 
 **Explicación:** Filtré por `poderCombate > 500` y los que pasan quedan en la lista. Mewtwo con 680, Charizard con 610 y Dragonite con 530 son los únicos que superan ese umbral.
 
@@ -612,7 +612,7 @@ public class Ejercicio10 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 10](evidencias/s2_ejercicio10.png)
+**Captura de ejecución:** ![Ejercicio 10](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio10.png)
 
 **Explicación:** Solo usé `.map()` para transformar cada objeto `Pokemon` en su nombre. No hace falta filtrar nada porque quiero todos.
 
@@ -653,7 +653,7 @@ public class Ejercicio11 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 11](evidencias/s2_ejercicio11.png)
+**Captura de ejecución:** ![Ejercicio 11](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio11.png)
 
 **Explicación:** `.mapToDouble()` convierte el Stream de objetos en un stream de números decimales con los valores de `poderCombate`. Luego `.average()` calcula el promedio y lo retorna como `OptionalDouble` por si la lista estuviera vacía.
 
@@ -693,7 +693,7 @@ public class Ejercicio12 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 12](evidencias/s2_ejercicio12.png)
+**Captura de ejecución:** ![Ejercicio 12](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio12.png)
 
 **Explicación:** `.max()` con `Comparator.comparingDouble()` recorre la lista comparando el `poderCombate` de cada Pokémon y se queda con el más alto. El resultado es Mewtwo con 680.
 
@@ -780,7 +780,7 @@ public class Ejercicio14 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 14](evidencias/s2_ejercicio14.png)
+**Captura de ejecución:** ![Ejercicio 14](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio15.png)
 
 **Explicación:** Es igual al ejercicio 13 pero agrupando por región en vez de tipo. Cada clave del mapa es una región y el valor es la lista de Pokémon que pertenecen a ella.
 
@@ -820,7 +820,7 @@ public class Ejercicio15 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 15](evidencias/s2_ejercicio15.png)
+**Captura de ejecución:** ![Ejercicio 15](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio15.png)
 
 **Explicación:** `.max()` compara los entrenadores por número de medallas y devuelve el que tenga más. Gary gana con 10 medallas.
 
@@ -860,7 +860,7 @@ public class Ejercicio16 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 16](evidencias/s2_ejercicio16.png)
+**Captura de ejecución:** ![Ejercicio 16](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio16.png)
 
 **Explicación:** `.filter()` descarta a Misty (5), May (3) porque no superan el umbral. Los que pasan se formatean con `.map()` mostrando nombre y medallas juntos.
 
@@ -927,7 +927,7 @@ public class Ejercicio17 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 17](evidencias/s2_ejercicio17.png)
+**Captura de ejecución:** ![Ejercicio 17](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio17.png)
 
 **Explicación:** Dentro del `.max()` uso un Stream anidado que suma el `poderCombate` del equipo de cada entrenador. El `.max()` externo compara esas sumas y devuelve al entrenador con el total más alto.
 
@@ -974,7 +974,7 @@ public class Ejercicio18 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 18](evidencias/s2_ejercicio18.png)
+**Captura de ejecución:** ![Ejercicio 18](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio18.png)
 
 **Explicación:** Le puse negativo al `poderCombate` en el `.sorted()` para que ordene de mayor a menor. Luego `.limit(5)` corta los primeros cinco. Usé `AtomicInteger` para el número de posición porque dentro de un lambda no puedo usar una variable normal que cambie.
 
@@ -1059,7 +1059,7 @@ public class Ejercicio19 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 19](evidencias/s2_ejercicio19.png)
+**Captura de ejecución:** ![Ejercicio 19](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s2_ejercicio19.png)
 
 **Explicación:** Encadené tres criterios en el `.sorted()`: primero ordeno por medallas de mayor a menor, luego por poder acumulado de mayor a menor y por último alfabéticamente como desempate. `.limit(3)` corta los tres primeros.
 
