@@ -65,7 +65,7 @@ public class Ejercicio2 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 2](evidencias/s1_ejercicio2.png)
+**Captura de ejecución:** ![Ejercicio 2](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-2-mabel/evidencias/s1_ejercicio2.png)
 
 **Explicación:** Primero filtré las palabras con más de 4 letras, eso dejó fuera "java", "api", "code" y "git". Luego las pasé a mayúsculas con `.map()`, las ordené con `.sorted()` y conté cuántas quedaron con `.count()`. Solo "stream" y "functional" cumplen la condición, así que el resultado es 2.
 
