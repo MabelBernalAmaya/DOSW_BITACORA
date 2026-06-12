@@ -33,9 +33,9 @@ public class Ejercicio1 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 1](../../evidencias/ejercicio1.png)
+**Captura de ejecución:** ![Ejercicio 1](evidencias/s1_ejercicio1.png)
 
-**Explicación:** Se convierte la lista en un Stream con `.stream()`. Luego se aplican dos `.filter()`: el primero selecciona los números pares (`n % 2 == 0`) y el segundo los mayores a 10 (`n > 10`). Finalmente `.collect(Collectors.toList())` convierte el resultado en una lista.
+**Explicación:** Usé `.stream()` para convertir la lista en un flujo de datos. Después apliqué `.filter()` dos veces: una para quedarme con los números pares y otra para los mayores a 10. Al final `.collect()` junta los resultados en una lista nueva.
 
 ---
 
@@ -65,9 +65,9 @@ public class Ejercicio2 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 2](../../evidencias/s1_ejercicio2.png)
+**Captura de ejecución:** ![Ejercicio 2](evidencias/s1_ejercicio2.png)
 
-**Explicación:** Se filtra con `.filter()` para quedarse solo con palabras de más de 4 letras (descarta "java", "api", "code", "git"). Luego `.map(String::toUpperCase)` las pasa a mayúsculas, `.sorted()` las ordena alfabéticamente y `.count()` cuenta cuántas quedaron. El resultado es 2 porque solo "stream" y "functional" cumplen la condición.
+**Explicación:** Primero filtré las palabras con más de 4 letras, eso dejó fuera "java", "api", "code" y "git". Luego las pasé a mayúsculas con `.map()`, las ordené con `.sorted()` y conté cuántas quedaron con `.count()`. Solo "stream" y "functional" cumplen la condición, así que el resultado es 2.
 
 ---
 
@@ -120,9 +120,9 @@ public class Ejercicio3 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 3](../../evidencias/s1_ejercicio3.png)
+**Captura de ejecución:** ![Ejercicio 3](evidencias/s1_ejercicio3.png)
 
-**Explicación:** Se usa `.filter()` para quedar solo con usuarios activos. Luego `.map()` convierte cada nombre a mayúsculas, `.sorted()` los ordena alfabéticamente y `.collect()` los agrupa en una lista.
+**Explicación:** Con `.filter()` me quedé solo con los usuarios que tienen `active = true`. Después `.map()` convierte cada nombre a mayúsculas, `.sorted()` los ordena de A a Z y `.collect()` arma la lista final.
 
 ---
 
@@ -174,9 +174,9 @@ public class Ejercicio4 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 4](../../evidencias/s1_ejercicio4.png)
+**Captura de ejecución:** ![Ejercicio 4](evidencias/s1_ejercicio4.png)
 
-**Explicación:** Se filtra con `.filter()` comparando la edad con 18. Los que pasan el filtro se transforman con `.map()` para extraer solo el nombre, y `.collect()` los junta en una lista.
+**Explicación:** Usé `.filter()` para comparar la edad de cada usuario con 18. Los que pasan el filtro se les extrae el nombre con `.map()` y al final `.collect()` los agrupa en una lista.
 
 ---
 
@@ -227,9 +227,9 @@ public class Ejercicio5 {
 }
 ```
 
-**Captura de ejecución:** ![Ejercicio 5](../../evidencias/s1_ejercicio5.png)
+**Captura de ejecución:** ![Ejercicio 5](evidencias/s1_ejercicio5.png)
 
-**Explicación:** `.peek()` imprime cada transacción a medida que el Stream la procesa, sin modificarla. Luego `.anyMatch()` revisa si al menos una transacción tiene `approved = false`. Si la hay, el lote no es válido, por eso se imprime `!hayNoAprobada`.
+**Explicación:** `.peek()` me sirvió para ver por consola cada transacción mientras el Stream la procesa, sin cambiar nada. Después `.anyMatch()` revisa si hay alguna con `approved = false`. Si encuentra una, el lote no es válido, por eso imprimo el negado `!hayNoAprobada`.
 
 ---
 
@@ -278,7 +278,7 @@ public class Ejercicio1 {
 
 **Captura de ejecución:** ![Ejercicio 1](evidencias/s2_ejercicio1.png)
 
-**Explicación:** Se usa `.filter()` comparando el tipo de cada Pokémon con "Fuego". Luego `.map()` extrae solo los nombres y `.collect()` los agrupa en una lista.
+**Explicación:** Con `.filter()` comparo el tipo de cada Pokémon contra "Fuego" y descarto los demás. Luego `.map()` saca solo el nombre y `.collect()` arma la lista final.
 
 ---
 
@@ -310,7 +310,7 @@ public class Ejercicio2 {
 
 **Captura de ejecución:** ![Ejercicio 2](evidencias/s2_ejercicio2.png)
 
-**Explicación:** `.map()` aplica `toUpperCase()` a cada nombre del Stream y `.collect()` convierte el resultado en una lista.
+**Explicación:** Solo usé `.map()` para aplicarle `toUpperCase()` a cada nombre. Es el ejercicio más directo de todos, no necesita filtrar nada.
 
 ---
 
@@ -340,7 +340,7 @@ public class Ejercicio3 {
 
 **Captura de ejecución:** ![Ejercicio 3](evidencias/s2_ejercicio3.png)
 
-**Explicación:** `.reduce(0, (a, b) -> a + b)` parte de un acumulador en 0 y va sumando cada nivel. El resultado es 300.
+**Explicación:** Usé `.reduce()` que va acumulando la suma de a un número por vez, empezando desde 0. Al recorrer toda la lista termina con el total, que en este caso es 300.
 
 ---
 
@@ -381,7 +381,7 @@ public class Ejercicio4 {
 
 **Captura de ejecución:** ![Ejercicio 4](evidencias/s2_ejercicio4.png)
 
-**Explicación:** `.max()` recibe un `Comparator` que compara por nivel. Retorna un `Optional` por si la lista estuviera vacía. Con `.isPresent()` se verifica antes de imprimir.
+**Explicación:** `.max()` recorre la lista y se queda con el Pokémon que tenga el nivel más alto según el `Comparator`. Devuelve un `Optional` por si la lista estuviera vacía, así que antes de imprimir verifico con `.isPresent()`.
 
 ---
 
@@ -426,7 +426,7 @@ public class Ejercicio5 {
 
 **Captura de ejecución:** ![Ejercicio 5](evidencias/s2_ejercicio5.png)
 
-**Explicación:** Se aplica `.filter()` para quedar solo con Pokémon de nivel mayor a 80. `.count()` da la cantidad y una segunda pasada con `.map()` extrae los nombres.
+**Explicación:** Hice dos Streams sobre la misma lista: uno para contar con `.count()` y otro para sacar los nombres con `.map()`. Los dos aplican el mismo `.filter()` de nivel mayor a 80.
 
 ---
 
@@ -461,7 +461,7 @@ public class Ejercicio6 {
 
 **Captura de ejecución:** ![Ejercicio 6](evidencias/s2_ejercicio6.png)
 
-**Explicación:** `.distinct()` elimina automáticamente los elementos repetidos del Stream, conservando solo la primera aparición de cada uno.
+**Explicación:** `.distinct()` se encarga solo de eliminar los duplicados, conserva la primera aparición de cada elemento y descarta las repetidas.
 
 ---
 
@@ -496,7 +496,7 @@ public class Ejercicio7 {
 
 **Captura de ejecución:** ![Ejercicio 7](evidencias/s2_ejercicio7.png)
 
-**Explicación:** `.sorted()` sin argumentos usa el orden natural de los String, que es alfabético. El resultado queda desde Abra hasta Squirtle.
+**Explicación:** `.sorted()` sin argumentos ordena los String de forma alfabética natural. La lista queda de Abra hasta Squirtle.
 
 ---
 
@@ -536,7 +536,7 @@ public class Ejercicio8 {
 
 **Captura de ejecución:** ![Ejercicio 8](evidencias/s2_ejercicio8.png)
 
-**Explicación:** `.filter()` evalúa el boolean `puedeEvolucionar` de cada Pokémon. Solo los que tienen `true` pasan al `.map()` que extrae sus nombres.
+**Explicación:** `.filter()` revisa el atributo `puedeEvolucionar` de cada Pokémon. Los que tienen `true` pasan, los demás no. Luego `.map()` extrae solo el nombre de cada uno.
 
 ---
 
@@ -575,7 +575,7 @@ public class Ejercicio9 {
 
 **Captura de ejecución:** ![Ejercicio 9](evidencias/s2_ejercicio9.png)
 
-**Explicación:** `.filter()` compara el `poderCombate` con 500. Solo Mewtwo (680), Charizard (610) y Dragonite (530) superan ese umbral.
+**Explicación:** Filtré por `poderCombate > 500` y los que pasan quedan en la lista. Mewtwo con 680, Charizard con 610 y Dragonite con 530 son los únicos que superan ese umbral.
 
 ---
 
@@ -614,7 +614,7 @@ public class Ejercicio10 {
 
 **Captura de ejecución:** ![Ejercicio 10](evidencias/s2_ejercicio10.png)
 
-**Explicación:** `.map()` transforma cada objeto `Pokemon` en un `String` con su nombre. `.collect(Collectors.toList())` junta todos esos strings en una lista.
+**Explicación:** Solo usé `.map()` para transformar cada objeto `Pokemon` en su nombre. No hace falta filtrar nada porque quiero todos.
 
 ---
 
@@ -655,7 +655,7 @@ public class Ejercicio11 {
 
 **Captura de ejecución:** ![Ejercicio 11](evidencias/s2_ejercicio11.png)
 
-**Explicación:** `.mapToDouble()` convierte el Stream de objetos en un `DoubleStream` con los valores de `poderCombate`. Luego `.average()` calcula el promedio y lo devuelve en un `OptionalDouble`.
+**Explicación:** `.mapToDouble()` convierte el Stream de objetos en un stream de números decimales con los valores de `poderCombate`. Luego `.average()` calcula el promedio y lo retorna como `OptionalDouble` por si la lista estuviera vacía.
 
 ---
 
@@ -695,7 +695,7 @@ public class Ejercicio12 {
 
 **Captura de ejecución:** ![Ejercicio 12](evidencias/s2_ejercicio12.png)
 
-**Explicación:** `.max()` con `Comparator.comparingDouble()` recorre toda la lista buscando el Pokémon con el mayor valor de `poderCombate`.
+**Explicación:** `.max()` con `Comparator.comparingDouble()` recorre la lista comparando el `poderCombate` de cada Pokémon y se queda con el más alto. El resultado es Mewtwo con 680.
 
 ---
 
@@ -738,7 +738,7 @@ public class Ejercicio13 {
 
 **Captura de ejecución:** ![Ejercicio 13](evidencias/s2_ejercicio13.png)
 
-**Explicación:** `Collectors.groupingBy()` agrupa los Pokémon según su tipo. `Collectors.mapping()` indica que se guarda solo el nombre de cada Pokémon en la lista del grupo.
+**Explicación:** `groupingBy()` agrupa los Pokémon usando el tipo como clave del mapa. Dentro uso `Collectors.mapping()` para que en cada grupo solo queden los nombres y no los objetos completos.
 
 ---
 
@@ -782,7 +782,7 @@ public class Ejercicio14 {
 
 **Captura de ejecución:** ![Ejercicio 14](evidencias/s2_ejercicio14.png)
 
-**Explicación:** Igual que el ejercicio anterior pero agrupando por `getRegion()`. Cada clave del mapa es una región y el valor es la lista de Pokémon de esa región.
+**Explicación:** Es igual al ejercicio 13 pero agrupando por región en vez de tipo. Cada clave del mapa es una región y el valor es la lista de Pokémon que pertenecen a ella.
 
 ---
 
@@ -822,15 +822,8 @@ public class Ejercicio15 {
 
 **Captura de ejecución:** ![Ejercicio 15](evidencias/s2_ejercicio15.png)
 
-**Explicación:** `.max()` con `Comparator.comparingInt()` compara entrenadores por número de medallas y devuelve el que tenga más.
+**Explicación:** `.max()` compara los entrenadores por número de medallas y devuelve el que tenga más. Gary gana con 10 medallas.
 
----
-
-## Retos Especiales (si aplica)
-
-- [ ] Reto Legendario — Method References
-- [ ] Reto Shiny — Buenas prácticas de commits
-- [ ] Reto Mewtwo — Ejercicio propuesto
 ---
 
 ### Ejercicio 16 – Entrenadores Experimentados
@@ -869,7 +862,7 @@ public class Ejercicio16 {
 
 **Captura de ejecución:** ![Ejercicio 16](evidencias/s2_ejercicio16.png)
 
-**Explicación:** `.filter()` descarta los entrenadores con 5 o menos medallas. `.map()` formatea cada resultado con nombre y medallas y `.collect()` los agrupa en una lista.
+**Explicación:** `.filter()` descarta a Misty (5), May (3) porque no superan el umbral. Los que pasan se formatean con `.map()` mostrando nombre y medallas juntos.
 
 ---
 
@@ -936,7 +929,7 @@ public class Ejercicio17 {
 
 **Captura de ejecución:** ![Ejercicio 17](evidencias/s2_ejercicio17.png)
 
-**Explicación:** Para cada entrenador se hace un Stream interno sobre su equipo, sumando el `poderCombate` con `.mapToDouble().sum()`. El `.max()` externo compara esas sumas y devuelve el entrenador con la mayor.
+**Explicación:** Dentro del `.max()` uso un Stream anidado que suma el `poderCombate` del equipo de cada entrenador. El `.max()` externo compara esas sumas y devuelve al entrenador con el total más alto.
 
 ---
 
@@ -983,7 +976,7 @@ public class Ejercicio18 {
 
 **Captura de ejecución:** ![Ejercicio 18](evidencias/s2_ejercicio18.png)
 
-**Explicación:** `.sorted()` ordena de mayor a menor usando el negativo del `poderCombate`. `.limit(5)` corta el Stream en los primeros cinco. `AtomicInteger` se usa para llevar el número de posición dentro del `forEach`.
+**Explicación:** Le puse negativo al `poderCombate` en el `.sorted()` para que ordene de mayor a menor. Luego `.limit(5)` corta los primeros cinco. Usé `AtomicInteger` para el número de posición porque dentro de un lambda no puedo usar una variable normal que cambie.
 
 ---
 
@@ -1068,7 +1061,7 @@ public class Ejercicio19 {
 
 **Captura de ejecución:** ![Ejercicio 19](evidencias/s2_ejercicio19.png)
 
-**Explicación:** `.sorted()` encadena tres criterios con `Comparator`: primero por medallas descendente, luego por poder acumulado descendente y finalmente por nombre alfabético como desempate. `.limit(3)` recorta el resultado a los tres primeros.
+**Explicación:** Encadené tres criterios en el `.sorted()`: primero ordeno por medallas de mayor a menor, luego por poder acumulado de mayor a menor y por último alfabéticamente como desempate. `.limit(3)` corta los tres primeros.
 
 ---
 
@@ -1137,6 +1130,12 @@ public class Ejercicio20 {
 
 **Captura de ejecución:** ![Ejercicio 20](evidencias/s2_ejercicio20.png)
 
-**Explicación:** Se hacen cinco Streams independientes sobre la misma lista: `groupingBy` con `counting()` para agrupar por tipo y región, `filter` + `count` para legendarios, `mapToInt` + `average` para el promedio de nivel y `max` con `Comparator` para el más fuerte.
+**Explicación:** Este ejercicio usa cinco Streams sobre la misma lista para sacar diferentes estadísticas: `groupingBy` con `counting()` para contar por tipo y región, `filter` + `count` para los legendarios, `mapToInt` + `average` para el promedio de nivel y `max` para encontrar el más fuerte.
 
 ---
+
+## Retos Especiales (si aplica)
+
+- [ ] Reto Legendario — Method References
+- [ ] Reto Shiny — Buenas prácticas de commits
+- [ ] Reto Mewtwo — Ejercicio propuesto
