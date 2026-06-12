@@ -34,4 +34,9 @@ public class Pokemon {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'isPuedeEvolucionar'");
     }
+
+    public Object isLegendario() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isLegendario'");
+    }
 }
