@@ -1138,5 +1138,5 @@ public class Ejercicio20 {
 
 ### Ejercicio 1 - Diagrama de Clases
 intento de Diagrama de clases  Pokémon y las visitas al Centro Pokémon.
-
+![ Pokemon](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel-ejercicio1-diagrama/evidencias/pokemon.jpg)
 ![Diagrama de Clases Pokemon](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel-ejercicio1-diagrama/evidencias/Diagrama%20de%20clases%20Ejercicio%20Pokemon.png)
