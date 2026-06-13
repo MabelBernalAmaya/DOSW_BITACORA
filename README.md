@@ -1134,8 +1134,9 @@ public class Ejercicio20 {
 
 ---
 
-## Retos Especiales (si aplica)
+## Semana 3
 
-- [ ] Reto Legendario — Method References
-- [ ] Reto Shiny — Buenas prácticas de commits
-- [ ] Reto Mewtwo — Ejercicio propuesto
+### Ejercicio 1 - Diagrama de Clases
+intento de Diagrama de clases  Pokémon y las visitas al Centro Pokémon.
+
+![Diagrama de Clases Pokemon](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel-ejercicio1-diagrama/evidencias/Diagrama%20de%20clases%20Ejercicio%20Pokemon.png)
