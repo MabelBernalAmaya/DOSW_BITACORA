@@ -1167,7 +1167,7 @@ También podemos usar Abstract Factory porque en cada método por país hay vari
 Abstract Factory nos ayuda a gupar los métodos de pago que están relacionados en este caso los de la misma nacionalidad lo que hace que sea escalable cuando existen varios métodos de pago en el mismo país. Pero el patron de method es suficiente ya que solo se necesita crear la estrategia de pago y no varias estrategias con pago facturación y así.
 
 ### 5. EJECUCION DEL CODIGO
-![ Ejercicio 1 ]()
+![ Ejercicio 1 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%201%20.png)
 
 ---
 
