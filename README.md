@@ -1140,3 +1140,134 @@ public class Ejercicio20 {
 intento de Diagrama de clases  Pokémon y las visitas al Centro Pokémon.
 ![ Pokemon](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel-ejercicio1-diagrama/evidencias/pokemon.jpg)
 ![Diagrama de Clases Pokemon](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel-ejercicio1-diagrama/evidencias/Diagrama%20de%20clases%20Ejercicio%20Pokemon.png)
+
+# Taller de Refuerzo Patrones - Semana 3 DOSW
+
+Ejercicios de Refuerzo — Patrones de Diseño Combinado
+
+## Ejercicio 1: Plataforma de pagos inteligentes
+### 1. ANALISIS DE PROBLEMA PLANTEADO
+Es una plataforma que tiene diferentes métodos de pago como tarjeta PSE Nequi PayPal entre otras, y dependiendo del usuario y su nacionalidad se usan métodos diferentes para hacer el pago.
+Sin aplicar ningún patron el código estaría lleno de IF y ELSE ya que si el tipo de pago es igual a PSE procesa el pago si no es pse si no nequi procesa diferente el pago y pasa lo mismo con los usuarios, y hasta ahí funcionaria bien, pero si llegaran a crear mas formas de pago y mas nacionalidades de usuarios tendríamos que pasar a modificar el código teniendo más IF y ELSE.
+Así violaría el principio Open/Closed el cual nos dice que el código debe estar abierto a extensión y cerrado a modificación ya que así cada vez que agreguemos métodos o nacionalidades nuevas nos obliga a modificar código ya existente.
+
+### 2. DISEÑOS PRESENTES
+PATRONES USADOS
+* **Strategy:** nos permite saber como se realiza el pago dependiendo de cada método de pago elegido.
+  Ejemplo:
+    * TARJETA: Valida la tarjeta – Cobra el total – Confirma el pago
+    * PSE: Conecta con el banco solicitado – Autoriza – Confirma el pago
+      Como podemos ver son algoritmos distintos para cada pago, pero son independientes.
+* **Factory Method:** Es el que crea los objetos o la plantilla para que strategy lo pueda usar, entonces si el cliente es colombiano no se crea un nuevo método para cada colombiano si no que se usa la plantilla para cliente colombiano y procesa el pago.
+
+### 3. QUE PATRONES PODRIAN APLICARSE
+También podemos usar Abstract Factory porque en cada método por país hay varias formas de pago por ejemplo en Colombia podemos pagar por PSE o por nequi, y podemos verlo como una familia de productos.
+
+### 4. JUSTIFICACION DE PATRON SELECCIONADO
+Abstract Factory nos ayuda a gupar los métodos de pago que están relacionados en este caso los de la misma nacionalidad lo que hace que sea escalable cuando existen varios métodos de pago en el mismo país. Pero el patron de method es suficiente ya que solo se necesita crear la estrategia de pago y no varias estrategias con pago facturación y así.
+
+### 5. EJECUCION DEL CODIGO
+![ Ejercicio 1 ]()
+
+---
+
+## Ejercicio 2. Sistema de Notificaciones Multicanal
+### 1. ANALISIS DEL PROBLEMA PLANTEADO
+Es una empresa la cual envía notificaciones por medio de diferentes canales ya sea por Wpp. SMS, Push Notification entonces cuando se genera un evento importante los canales deben recibir el aviso cuando se cambie el estado. Inicialmente podríamos usar if en todo el código para que se envie a correo otro if para que se envie en sms y otro para enviar wpp, pero entonces cuando se quiera agregar mas plataformas para enviar la notificación toca modificar el código y se va a ver desordenado.
+Entonces si en grupo alguien escribe que hay reunión mañana no le envía la notificación a cada persona si no que simplemente la publica y todos reciben la información por eso se usa el patrón Observer.
+
+### 2. DISEÑOS PRESENTES
+PATRONES USADOS
+* **Observer:** Es el que permite que varios objetos se modifiquen cuando ocurre un evento, puede ser cuando cambia el estado de un pedido a confirmado y se modifican todas.
+* **Factory Method:** Es la que crea cada método de los canales de notificación.
+
+### 3. QUE PATRONES PODRIAN APLICARSE Y JUSTIFICACION
+Se podría usar strategy para crear el algoritmo a cada clase de correo wpp y de más, porque Factory solo crea los objetos, pero no avisa automáticamente, y Observer se crea la automatización ero igual toca hacerlo manualmente por eso ese solo patron no sirve.
+
+### 4. EJECUCION CODIGO
+ 
+---
+
+## Ejercicio 3: Reportes empresariales
+### 1. ANALISIS DEL PROBLEMA PLANTEADO
+La empresa genera reportes, pero usa diferentes formatos como PDF, Exel CVS, cada reporte sigue el mismo proceso lo que cambia es el formato que se elija sin patrones el código estaría lleno de if para hacer el proceso lo que hace que hallan duplicados y demás permite reutilizar pasos comunes
+
+### 2. DISEÑOS PRESENTES
+* **Template Method:** es el que le da los pasos a seguir al algoritmo para que funcione en orden. Teniendo en cuenta que los pasos que se hacen es 1 obtener los datos para el reporte 2 procesar los datos-3 aplicar formato y 4 exportar. Los pasos 1 y 2 se repiten en todos los formatos, pero ya el 3 y 4 no.
+* **Factory Method:** ese patron es el que crea las clases de reportepdf, reporte exel y reporte cvs para que no se cree un método nuevo si no que se implemente ya el que esta cuando se necesite.
+
+### 3. PATRONES QUE PODRIAN USARSE y JUSTIFICACION
+Builder se podría usar si cada reporte tuviera más características como el logo graficas tablas y demás, pero el ejercicio solo menciona un flujo común con pasos ya fijos, también se podría usar strategy ya que así reemplaza el algoritmo según se requiera, pero en este caso témplate define ya una plantilla fija para usar en el algoritmo.
+
+### 4. CODIGO EJECUTANDO
+
+---
+
+## Ejercicio 4: videojuego de Personajes
+### 1. ANALISIS DE PROBLEMA PLANTEADO
+Cada tipo de jugador en el juego tiene la capacidad de mejorar conforme va pasando el juego, si no usamos patrones podríamos crear clases para cada tipo de mejora de el jugador.
+* Si es guerrero habría, GuerreroConEspada, GuerreroConEscudo, GuerreroConEspadaYEscudo lo mismo con el jugador de Mago esto nos va a generar demasiadas clases por cada personaje y mejora.
+
+### 2. DISEÑOS PRESENTES
+* **Builder:** nos ayuda a construir el personaje paso a paso, para evitar construcciones pesadas de personajes y así crearlos más fácilmente.
+* **Decorator:** nos permite agregar habilidades o mejoras sin modificar la clase original por eso sirve para el jugador si quiere agregar espada o escudo y así sin tener que modificar la clase base del jugador.
+
+### 3. QUE PATRON PODRIA USARSE Y JUSTIFICACION
+Composite se podría usar ya que crearíamos personajes a partir de otros componentes que estén organizados de forma jerárquica o que están encapsulados en clases generales por ejemplo espada escudo y armadura pertenecen a una clase general llamada equipamiento y así, entonces podemos usar tanto grupos completos como elementos. Pero como el juego no es tanto árbol si no ir agregando a medida que se necesite con Decorative estaría bien.
+
+### 4. CODIGO EJECUTANDO
+
+---
+
+## Ejercicio 5: Sistema Bancario Antiguo
+### 1. ANALISIS DE PROBLEMA PLANTEADO
+Es un banco que tiene un sistema moderno que quiere trabajar con un sistema antiguo, pero tienen un problema y esque hablan en idiomas diferentes o palabras diferentes para cada método lo que hace que el sistema moderno espere una cosa y el antiguo este ofreciendo otra haciendo que no sean compatibles.
+Si no usamos patrones se tendría que modificar el sistema antiguo para que el moderno entienda, llenándolo de traducciones y eso no es nada eficaz.
+
+### 2. DISEÑOS PRESENTES
+* **Adapter:** para poder hacer compatible dos interfaces diferentes las conecta reutilizando y traduciendo las interfaces.
+* **Facade:** va a simplificar el acceso a un sistema complejo eliminando pasos o validaciones que son innecesarias y así se pueden reducir dependencias y un código más fácil de usar.
+
+### 3. PATRONES QUE SE PODRIAN USAR
+se podría utilizar el patrón Bridge, ya que también ayuda a separar las funcionalidades principales de la forma en que se implementan, pero en este ejercicio el problema principal es conectar un sistema bancario antiguo con uno moderno sin tener que modificar el sistema existente. Por eso Adapter resulta más adecuado, ya que es como un intermediario entre ambos sistemas y Facade ayuda a simplificar el uso del sistema ofreciendo una interfaz más sencilla para el usuario.
+
+### 4. CODIGO EJECUTANDO
+ 
+---
+
+## Ejercicio 6 Motor de Recomendaciones
+### 1. ANALISIS DE PROBLEMA PLANTEADO
+Es una plataforma que se encarga de recomendar contenido dependiendo de las condiciones por género o historial popularidad o similitud, con la capacidad de que el usuario puede cambiar las preferencias cada que quiera el problema esque si no usamos patrones tendiramos que actualizar el código cada que el usuario cambie de preferencias.
+
+### 2. DISEÑOS PRESENTES:
+El patron de strategy crea cada algoritmo para poder recomendar el contenido de una forma diferente sin tocar el resto del sistema, el patron observer permite que cada clase sepa cuando enterarse si cambian las preferencias, entonces cuando cambia las preferencias Observer le avisa a todos. Como funcionan es digamos en la popularidad e historial del usuario strategy cambia el algoritmo y observer detecta el cambio y lo notifica   y cargan la nueva información para el usuario.
+
+### 3. ¿QUE OTROS PATRONES PODEMOS USAR?
+Se podría usar el Patron de Chain of Responsability porque para poder dar una recomendación el algoritmo pasa por genero popularidad historial y así sucesivamente y pasa al resultado siguiente pero esta solución no es la mejor porque el usuario selecciona un único tipo de recomendación según las preferencias que tenga, así que son independientes los algoritmos y así se valide uno el resultado no afecta al otro
+
+### 4. CODIGO EJECUTANDO
+ 
+---
+
+## Ejercicio 7 Flujo de aprobación de documentos
+### 1. ANALISIS DEL PROBLEMA PLANTEADO
+La empresa tiene documentos que tiene que pasar por varias validaciones para poder aprobarse, pero no todos documentos pasan por todas las validaciones ya que no pertenecen a su área, sin patrones al agregar una nueva validación o área se tendría que modificar el código todo el tiempo permitiendo que hallan más errores.
+cada patron aporta muchas cosas por ejemplo el patron Chain of Responsability en donde están cada una de las validaciones y quien debe revisar el documento , en cada validador va a decidir si lo va a procesar o si lo envía al siguiente validador evitando así tener varios if y else que son innecesarios , ahora el patron de State con el que podemos saber en qué estado está el documento ya sea en revisión aprobado o rechazado, dependiendo del estado donde este va a saber que hacer y dar una respuesta a su estado ,para evitar cambiar manualmente el estado cada que modifiquemos el código
+
+### 2. ¿QUE PATRON PODEMOS USAR?
+se podría utilizar Strategy para manejar diferentes formas de aprobación según el tipo de documento ya que algunos si debieran revisar o pasar por todas las áreas, pero el problema principal no consiste en cambiar algoritmos de validación sino en permitir que se valide el documento de forma secuencial y que este cambie de estado según el resultado de cada revisión.
+
+### 3. CODIGO EJECUTANDO
+
+---
+
+## Ejercicio 8 Sistema de Pedidos en Restaurante
+### 1. ANALISIS DEL PROBLEMA PLANTEADO
+En este caso el cliente puede personalizar completamente su pedido, escogiendo tamaño, tipo de carne, ingredientes, acompañamientos y extras. Si no se utilizaran patrones de diseño, se tendría que crear un constructor con demasiados parámetros o muchas combinaciones de pedidos diferentes, haciendo que el código sea difícil de entender.
+Además, cuando el pedido es confirmado, el sistema debe avisar a diferentes áreas como cocina, facturación y domicilio. Si esto se hiciera directamente desde la clase Pedido, cada vez que se agregara un nuevo servicio sería necesario modificar el código existente
+El patrón Builder permite construir el pedido paso a paso, haciendo que la creación sea más organizada y fácil de entender. También garantiza que el pedido esté completo antes de ser utilizado. Por otro lado, el patrón Observer permite notificar automáticamente a los diferentes servicios cuando el pedido es confirmado y así el pedido no necesita conocer directamente a cocina, facturación o domicilio, reduciendo la dependencia entre componentes.
+
+### 2. ¿QUE PATRON PODEMOS USAR?
+se podría utilizar Factory Method para crear distintos tipos de pedidos predefinidos, como un menú infantil, un menú ejecutivo pero el problema principal no es crear diferentes tipos de pedidos, sino que el cliente personalice completamente su hamburguesa y que varios servicios reaccionen cuando el pedido sea confirmado.
+
+### 3. CODIGO EJECUTANDO
