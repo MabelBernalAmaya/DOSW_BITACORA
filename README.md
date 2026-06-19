@@ -1185,8 +1185,8 @@ PATRONES USADOS
 Se podría usar strategy para crear el algoritmo a cada clase de correo wpp y de más, porque Factory solo crea los objetos, pero no avisa automáticamente, y Observer se crea la automatización ero igual toca hacerlo manualmente por eso ese solo patron no sirve.
 
 ### 4. EJECUCION CODIGO
- 
----
+
+![ Ejercicio 2 ]()
 
 ## Ejercicio 3: Reportes empresariales
 ### 1. ANALISIS DEL PROBLEMA PLANTEADO
