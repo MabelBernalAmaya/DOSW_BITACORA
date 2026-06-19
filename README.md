@@ -1186,7 +1186,8 @@ Se podría usar strategy para crear el algoritmo a cada clase de correo wpp y de
 
 ### 4. EJECUCION CODIGO
 
-![ Ejercicio 2 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%202%20.png)
+![ Ejercicio 2 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%202%20.png
+)
 
 ## Ejercicio 3: Reportes empresariales
 ### 1. ANALISIS DEL PROBLEMA PLANTEADO
