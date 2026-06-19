@@ -1233,7 +1233,7 @@ se podría utilizar el patrón Bridge, ya que también ayuda a separar las funci
 
 ### 4. CODIGO EJECUTANDO
 
-![ Ejercicio 5 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%205.png())
+![ Ejercicio 5 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%205.png)
 
 ## Ejercicio 6 Motor de Recomendaciones
 ### 1. ANALISIS DE PROBLEMA PLANTEADO
