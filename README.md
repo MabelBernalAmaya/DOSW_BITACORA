@@ -1201,8 +1201,7 @@ La empresa genera reportes, pero usa diferentes formatos como PDF, Exel CVS, cad
 Builder se podría usar si cada reporte tuviera más características como el logo graficas tablas y demás, pero el ejercicio solo menciona un flujo común con pasos ya fijos, también se podría usar strategy ya que así reemplaza el algoritmo según se requiera, pero en este caso témplate define ya una plantilla fija para usar en el algoritmo.
 
 ### 4. CODIGO EJECUTANDO
-
----
+![ Ejercicio 3 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%203%20.png)
 
 ## Ejercicio 4: videojuego de Personajes
 ### 1. ANALISIS DE PROBLEMA PLANTEADO
@@ -1218,7 +1217,7 @@ Composite se podría usar ya que crearíamos personajes a partir de otros compon
 
 ### 4. CODIGO EJECUTANDO
 
----
+![ Ejercicio 4 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%204%20.png)
 
 ## Ejercicio 5: Sistema Bancario Antiguo
 ### 1. ANALISIS DE PROBLEMA PLANTEADO
@@ -1233,8 +1232,8 @@ Si no usamos patrones se tendría que modificar el sistema antiguo para que el m
 se podría utilizar el patrón Bridge, ya que también ayuda a separar las funcionalidades principales de la forma en que se implementan, pero en este ejercicio el problema principal es conectar un sistema bancario antiguo con uno moderno sin tener que modificar el sistema existente. Por eso Adapter resulta más adecuado, ya que es como un intermediario entre ambos sistemas y Facade ayuda a simplificar el uso del sistema ofreciendo una interfaz más sencilla para el usuario.
 
 ### 4. CODIGO EJECUTANDO
- 
----
+
+![ Ejercicio 5 ]https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%205.png()
 
 ## Ejercicio 6 Motor de Recomendaciones
 ### 1. ANALISIS DE PROBLEMA PLANTEADO
@@ -1247,8 +1246,8 @@ El patron de strategy crea cada algoritmo para poder recomendar el contenido de 
 Se podría usar el Patron de Chain of Responsability porque para poder dar una recomendación el algoritmo pasa por genero popularidad historial y así sucesivamente y pasa al resultado siguiente pero esta solución no es la mejor porque el usuario selecciona un único tipo de recomendación según las preferencias que tenga, así que son independientes los algoritmos y así se valide uno el resultado no afecta al otro
 
 ### 4. CODIGO EJECUTANDO
- 
----
+
+![ Ejercicio 6 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%206%20.png)
 
 ## Ejercicio 7 Flujo de aprobación de documentos
 ### 1. ANALISIS DEL PROBLEMA PLANTEADO
@@ -1260,15 +1259,5 @@ se podría utilizar Strategy para manejar diferentes formas de aprobación segú
 
 ### 3. CODIGO EJECUTANDO
 
----
+![ Ejercicio 7 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%207%20.png)
 
-## Ejercicio 8 Sistema de Pedidos en Restaurante
-### 1. ANALISIS DEL PROBLEMA PLANTEADO
-En este caso el cliente puede personalizar completamente su pedido, escogiendo tamaño, tipo de carne, ingredientes, acompañamientos y extras. Si no se utilizaran patrones de diseño, se tendría que crear un constructor con demasiados parámetros o muchas combinaciones de pedidos diferentes, haciendo que el código sea difícil de entender.
-Además, cuando el pedido es confirmado, el sistema debe avisar a diferentes áreas como cocina, facturación y domicilio. Si esto se hiciera directamente desde la clase Pedido, cada vez que se agregara un nuevo servicio sería necesario modificar el código existente
-El patrón Builder permite construir el pedido paso a paso, haciendo que la creación sea más organizada y fácil de entender. También garantiza que el pedido esté completo antes de ser utilizado. Por otro lado, el patrón Observer permite notificar automáticamente a los diferentes servicios cuando el pedido es confirmado y así el pedido no necesita conocer directamente a cocina, facturación o domicilio, reduciendo la dependencia entre componentes.
-
-### 2. ¿QUE PATRON PODEMOS USAR?
-se podría utilizar Factory Method para crear distintos tipos de pedidos predefinidos, como un menú infantil, un menú ejecutivo pero el problema principal no es crear diferentes tipos de pedidos, sino que el cliente personalice completamente su hamburguesa y que varios servicios reaccionen cuando el pedido sea confirmado.
-
-### 3. CODIGO EJECUTANDO
