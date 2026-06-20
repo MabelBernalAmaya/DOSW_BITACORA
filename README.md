@@ -1262,6 +1262,6 @@ se podría utilizar Strategy para manejar diferentes formas de aprobación segú
 ![ Ejercicio 7 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%207%20.png)
 
 # MANUAL IDENTIDAD- EJERCICIO EN CLASE 
-Explicacion de la idea: Fue realizado en CANVA y es un Restaurante con tematica de regueton,con diferentes tipos de saclhipapas con nombres de artistas de regueton, tiene una maquina transportadora para recibir la comida ala mesa, contiene tipografia, paleta de colores, publico dirigido.
+Explicacion de la idea:  Restaurante con tematica de regueton,con diferentes tipos de saclhipapas con nombres de artistas de regueton, tiene una maquina transportadora para recibir la comida ala mesa, contiene tipografia, paleta de colores, publico dirigido.
+LINK CANVA DEL MANUAL: https://canva.link/qt9am63x2rz3zhq
 ![ MANUAL DE IDENTIDAD ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/MANUAL%20DE%20IDENTIDAD%20MABEL.png)
-LINK CANVA: https://canva.link/qt9am63x2rz3zhq
