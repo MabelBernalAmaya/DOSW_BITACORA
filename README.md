@@ -1280,8 +1280,8 @@ Se podría utilizar **Strategy** para manejar diferentes formas de aprobación s
 ![ MANUAL DE IDENTIDAD ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/MANUAL%20DE%20IDENTIDAD%20MABEL.png)
 
 ##  SEMANA 3 - TAREA REQUERIMIENTOS - INSCRIPCION A INGENIERIA DE SISTEMAS 
-![Evidencia Ejercicio 1](evidencias/FOTO%201.jpeg)
+![Evidencia Ejercicio 1](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/FOTO%201%20.jpeg)
 
-![Evidencia Ejercicio 2](evidencias/FOTO%202.jpeg)
+![Evidencia Ejercicio 2](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/FOTO%202%20.jpeg)
 
-![Evidencia Ejercicio 3](evidencias/FOTO%203.jpeg)
+![Evidencia Ejercicio 3](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/FOTO%203%20.jpeg)
