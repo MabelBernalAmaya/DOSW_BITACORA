@@ -1265,3 +1265,9 @@ se podría utilizar Strategy para manejar diferentes formas de aprobación segú
 Explicacion de la idea:  Restaurante con tematica de regueton,con diferentes tipos de saclhipapas con nombres de artistas de regueton, tiene una maquina transportadora para recibir la comida ala mesa, contiene tipografia, paleta de colores, publico dirigido.
 LINK CANVA DEL MANUAL: https://canva.link/qt9am63x2rz3zhq
 ![ MANUAL DE IDENTIDAD ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/MANUAL%20DE%20IDENTIDAD%20MABEL.png)
+##  SEMANA 3 - TAREA REQUERIMIENTOS - INSCRIPCION A INGENIERIA DE SISTEMAS
+![Evidencia Ejercicio 1](https://raw.githubusercontent.com/MabelBernalAmaya/DOSW_BITACORA/feature/semana-3-mabel/evidencias/FOTO%201%20.jpeg)
+
+![Evidencia Ejercicio 2](https://raw.githubusercontent.com/MabelBernalAmaya/DOSW_BITACORA/feature/semana-3-mabel/evidencias/FOTO%202%20.jpeg)
+
+![Evidencia Ejercicio 3](https://raw.githubusercontent.com/MabelBernalAmaya/DOSW_BITACORA/feature/semana-3-mabel/evidencias/FOTO%203%20.jpeg)
