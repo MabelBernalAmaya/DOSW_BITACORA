@@ -1222,7 +1222,7 @@ Composite se podría usar ya que crearíamos personajes a partir de otros compon
 ### 4. CODIGO EJECUTANDO Y DIAGRAMA 
 ![ Ejercicio 4  diagrama ] (https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
 
-![ Ejercicio 4 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%204%20.png)
+![ Ejercicio 4 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
 
 ## Ejercicio 5: Sistema Bancario Antiguo
 ### 1. ANALISIS DE PROBLEMA PLANTEADO
@@ -1237,7 +1237,7 @@ Si no usamos patrones se tendría que modificar el sistema antiguo para que el m
 se podría utilizar el patrón Bridge, ya que también ayuda a separar las funcionalidades principales de la forma en que se implementan, pero en este ejercicio el problema principal es conectar un sistema bancario antiguo con uno moderno sin tener que modificar el sistema existente. Por eso Adapter resulta más adecuado, ya que es como un intermediario entre ambos sistemas y Facade ayuda a simplificar el uso del sistema ofreciendo una interfaz más sencilla para el usuario.
 
 ### 4. CODIGO EJECUTANDO Y DIAGRAMA 
-![ Ejercicio 5 doagrama  ] (https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%205%20diagrama.png)
+![ Ejercicio 5 doagrama  ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%205%20diagrama.png)
 ![ Ejercicio 5 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%205.png)
 
 ## Ejercicio 6 Motor de Recomendaciones
@@ -1263,7 +1263,7 @@ cada patron aporta muchas cosas por ejemplo el patron Chain of Responsability en
 se podría utilizar Strategy para manejar diferentes formas de aprobación según el tipo de documento ya que algunos si debieran revisar o pasar por todas las áreas, pero el problema principal no consiste en cambiar algoritmos de validación sino en permitir que se valide el documento de forma secuencial y que este cambie de estado según el resultado de cada revisión.
 
 ### 3. CODIGO EJECUTANDO Y DIAGRAMA 
-![ Ejercicio 7  diagrama ] (https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%207%20diagrama.png)
+![ Ejercicio 7  diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%207%20diagrama.png)
 ![ Ejercicio 7 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%207%20.png)
 
 # MANUAL IDENTIDAD- EJERCICIO EN CLASE 
