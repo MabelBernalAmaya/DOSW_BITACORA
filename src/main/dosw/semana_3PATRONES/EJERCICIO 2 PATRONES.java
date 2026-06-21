@@ -1,4 +1,4 @@
-package main.dosw.semana_3patrones;
+package main.dosw.semana_3PATRONES;
 
 // Observer para las notificaciones
  interface Notificador {
