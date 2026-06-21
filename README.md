@@ -1220,7 +1220,7 @@ Cada tipo de jugador en el juego tiene la capacidad de mejorar conforme va pasan
 Composite se podría usar ya que crearíamos personajes a partir de otros componentes que estén organizados de forma jerárquica o que están encapsulados en clases generales por ejemplo espada escudo y armadura pertenecen a una clase general llamada equipamiento y así, entonces podemos usar tanto grupos completos como elementos. Pero como el juego no es tanto árbol si no ir agregando a medida que se necesite con Decorative estaría bien.
 
 ### 4. CODIGO EJECUTANDO Y DIAGRAMA 
-![ Ejercicio 4  diagrama ] (https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
+![ Ejercicio 4 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
 
 ![ Ejercicio 4 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
 
@@ -1251,7 +1251,7 @@ El patron de strategy crea cada algoritmo para poder recomendar el contenido de 
 Se podría usar el Patron de Chain of Responsability porque para poder dar una recomendación el algoritmo pasa por genero popularidad historial y así sucesivamente y pasa al resultado siguiente pero esta solución no es la mejor porque el usuario selecciona un único tipo de recomendación según las preferencias que tenga, así que son independientes los algoritmos y así se valide uno el resultado no afecta al otro
 
 ### 4. CODIGO EJECUTANDO Y DIAGRAMA 
-![ Ejercicio 6 diagrama ] (https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%206%20diagrama.png)
+![ Ejercicio 6 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%206%20diagrama.png)
 ![ Ejercicio 6 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%206%20.png)
 
 ## Ejercicio 7 Flujo de aprobación de documentos
