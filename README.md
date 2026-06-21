@@ -1203,70 +1203,72 @@ La empresa genera reportes, pero usa diferentes formatos como PDF, Exel CVS, cad
 ### 3. PATRONES QUE PODRIAN USARSE y JUSTIFICACION
 Builder se podría usar si cada reporte tuviera más características como el logo graficas tablas y demás, pero el ejercicio solo menciona un flujo común con pasos ya fijos, también se podría usar strategy ya que así reemplaza el algoritmo según se requiera, pero en este caso témplate define ya una plantilla fija para usar en el algoritmo.
 
-### 4. CODIGO EJECUTANDO DIAGRAMA 
-![ Ejercicio 3 diagrama] (https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%203%20diagrama.png)
-![ Ejercicio 3 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%203%20.png)
+### 4. CODIGO EJECUTANDO DIAGRAMA
+![ Ejercicio 3 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%203%20diagrama.png)
+![ Ejercicio 3 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%203%20.png)
 
-## Ejercicio 4: videojuego de Personajes
+## Ejercicio 4: Videojuego de Personajes
 ### 1. ANALISIS DE PROBLEMA PLANTEADO
-Cada tipo de jugador en el juego tiene la capacidad de mejorar conforme va pasando el juego, si no usamos patrones podríamos crear clases para cada tipo de mejora de el jugador.
-* Si es guerrero habría, GuerreroConEspada, GuerreroConEscudo, GuerreroConEspadaYEscudo lo mismo con el jugador de Mago esto nos va a generar demasiadas clases por cada personaje y mejora.
+Cada tipo de jugador en el juego tiene la capacidad de mejorar conforme va pasando el juego. Si no usamos patrones, tendríamos que crear clases para cada tipo de mejora del jugador.
+* Si es guerrero habría: GuerreroConEspada, GuerreroConEscudo, GuerreroConEspadaYEscudo. Lo mismo ocurriría con el Mago. Esto nos va a generar una explosión de clases innecesarias por cada personaje y mejora.
 
 ### 2. DISEÑOS PRESENTES
-* **Builder:** nos ayuda a construir el personaje paso a paso, para evitar construcciones pesadas de personajes y así crearlos más fácilmente.
-* **Decorator:** nos permite agregar habilidades o mejoras sin modificar la clase original por eso sirve para el jugador si quiere agregar espada o escudo y así sin tener que modificar la clase base del jugador.
+* **Builder:** Nos ayuda a construir el personaje paso a paso, para evitar constructores pesados y complejos, facilitando su creación.
+* **Decorator:** Nos permite agregar habilidades o mejoras dinámicamente sin modificar la clase original. Sirve perfectamente para el jugador si quiere equipar una espada o un escudo sin alterar la clase base del personaje.
 
 ### 3. QUE PATRON PODRIA USARSE Y JUSTIFICACION
-Composite se podría usar ya que crearíamos personajes a partir de otros componentes que estén organizados de forma jerárquica o que están encapsulados en clases generales por ejemplo espada escudo y armadura pertenecen a una clase general llamada equipamiento y así, entonces podemos usar tanto grupos completos como elementos. Pero como el juego no es tanto árbol si no ir agregando a medida que se necesite con Decorative estaría bien.
+Se podría usar **Composite** ya que crearíamos personajes a partir de otros componentes organizados de forma jerárquica o encapsulados en clases generales (por ejemplo: espada, escudo y armadura pertenecen a una clase general llamada *Equipamiento*). Así podríamos tratar tanto a los grupos completos como a los elementos individuales de la misma forma. Sin embargo, como el juego no se estructura tanto en forma de árbol sino que requiere ir agregando características a medida que se necesiten, **Decorator** es la opción ideal.
 
-### 4. CODIGO EJECUTANDO Y DIAGRAMA 
-![ Ejercicio 4 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
-
-![ Ejercicio 4 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
+### 4. CODIGO EJECUTANDO Y DIAGRAMA
+![ Ejercicio 4 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
+![ Ejercicio 4 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
 
 ## Ejercicio 5: Sistema Bancario Antiguo
 ### 1. ANALISIS DE PROBLEMA PLANTEADO
-Es un banco que tiene un sistema moderno que quiere trabajar con un sistema antiguo, pero tienen un problema y esque hablan en idiomas diferentes o palabras diferentes para cada método lo que hace que el sistema moderno espere una cosa y el antiguo este ofreciendo otra haciendo que no sean compatibles.
-Si no usamos patrones se tendría que modificar el sistema antiguo para que el moderno entienda, llenándolo de traducciones y eso no es nada eficaz.
+Es un banco que tiene un sistema moderno que requiere trabajar con un sistema antiguo, pero tienen el inconveniente de que "hablan" en idiomas diferentes (utilizan firmas o nombres de métodos distintos). Esto hace que el sistema moderno espere una estructura y el antiguo ofrezca otra, haciendo que no sean compatibles.
+Si no usamos patrones, se tendría que modificar directamente el sistema antiguo para que el moderno lo entienda, llenándolo de traducciones acopladas, lo cual no es eficaz ni escalable.
 
 ### 2. DISEÑOS PRESENTES
-* **Adapter:** para poder hacer compatible dos interfaces diferentes las conecta reutilizando y traduciendo las interfaces.
-* **Facade:** va a simplificar el acceso a un sistema complejo eliminando pasos o validaciones que son innecesarias y así se pueden reducir dependencias y un código más fácil de usar.
+* **Adapter:** Permite hacer compatibles dos interfaces diferentes. Las conecta reutilizando y traduciendo las peticiones entre ambas.
+* **Facade:** Simplifica el acceso a un sistema complejo o antiguo, eliminando pasos o validaciones innecesarias para ofrecer una interfaz unificada y reducir las dependencias.
 
 ### 3. PATRONES QUE SE PODRIAN USAR
-se podría utilizar el patrón Bridge, ya que también ayuda a separar las funcionalidades principales de la forma en que se implementan, pero en este ejercicio el problema principal es conectar un sistema bancario antiguo con uno moderno sin tener que modificar el sistema existente. Por eso Adapter resulta más adecuado, ya que es como un intermediario entre ambos sistemas y Facade ayuda a simplificar el uso del sistema ofreciendo una interfaz más sencilla para el usuario.
+Se podría utilizar el patrón **Bridge**, ya que ayuda a separar las funcionalidades principales de la forma en que se implementan. Sin embargo, en este ejercicio el problema principal es conectar un sistema bancario antiguo con uno moderno sin tener que modificar el sistema existente. Por eso **Adapter** resulta más adecuado al actuar como un intermediario directo entre ambos, mientras que **Facade** complementa ayudando a simplificar el uso del sistema complejo ofreciendo una interfaz más sencilla para el usuario.
 
-### 4. CODIGO EJECUTANDO Y DIAGRAMA 
-![ Ejercicio 5 doagrama  ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%205%20diagrama.png)
-![ Ejercicio 5 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%205.png)
+### 4. CODIGO EJECUTANDO Y DIAGRAMA
+![ Ejercicio 5 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%205%20diagrama.png)
+![ Ejercicio 5 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%205.png)
 
 ## Ejercicio 6 Motor de Recomendaciones
-### 1. ANALISIS DE PROBLEMA PLANTEADO
-Es una plataforma que se encarga de recomendar contenido dependiendo de las condiciones por género o historial popularidad o similitud, con la capacidad de que el usuario puede cambiar las preferencias cada que quiera el problema esque si no usamos patrones tendiramos que actualizar el código cada que el usuario cambie de preferencias.
+### 1. ANALISIS DE PROBLEM PLANTEADO
+Es una plataforma que se encarga de recomendar contenido dependiendo de condiciones como género, historial, popularidad o similitud, con la particularidad de que el usuario puede cambiar sus preferencias cuando quiera. El problema es que si no usamos patrones, tendríamos que actualizar el código de forma manual y rígida cada vez que cambien las preferencias.
 
 ### 2. DISEÑOS PRESENTES:
-El patron de strategy crea cada algoritmo para poder recomendar el contenido de una forma diferente sin tocar el resto del sistema, el patron observer permite que cada clase sepa cuando enterarse si cambian las preferencias, entonces cuando cambia las preferencias Observer le avisa a todos. Como funcionan es digamos en la popularidad e historial del usuario strategy cambia el algoritmo y observer detecta el cambio y lo notifica   y cargan la nueva información para el usuario.
+El patrón **Strategy** encapsula cada algoritmo para poder recomendar el contenido de una forma diferente sin tocar el resto del sistema. Por otro lado, el patrón **Observer** permite que los componentes se enteren en tiempo real cuando cambian las preferencias del usuario. Al trabajar juntos, cuando el usuario cambia sus preferencias, el *Observer* notifica el cambio y el contexto de *Strategy* selecciona el algoritmo adecuado (popularidad, historial, etc.) para cargar la nueva información de inmediato.
 
 ### 3. ¿QUE OTROS PATRONES PODEMOS USAR?
-Se podría usar el Patron de Chain of Responsability porque para poder dar una recomendación el algoritmo pasa por genero popularidad historial y así sucesivamente y pasa al resultado siguiente pero esta solución no es la mejor porque el usuario selecciona un único tipo de recomendación según las preferencias que tenga, así que son independientes los algoritmos y así se valide uno el resultado no afecta al otro
+Se podría evaluar el patrón **Chain of Responsibility** para que el algoritmo pase secuencialmente por género, popularidad, historial, etc., derivando el flujo al siguiente eslabón. Sin embargo, esta solución no es la mejor porque el usuario selecciona un único tipo de recomendación según sus preferencias actuales. Los algoritmos son independientes y la validación o resultado de uno no debería afectar ni depender del otro.
 
-### 4. CODIGO EJECUTANDO Y DIAGRAMA 
-![ Ejercicio 6 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%206%20diagrama.png)
-![ Ejercicio 6 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%206%20.png)
+### 4. CODIGO EJECUTANDO Y DIAGRAMA
+![ Ejercicio 6 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%206%20diagrama.png)
+![ Ejercicio 6 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%206%20.png)
 
 ## Ejercicio 7 Flujo de aprobación de documentos
 ### 1. ANALISIS DEL PROBLEMA PLANTEADO
-La empresa tiene documentos que tiene que pasar por varias validaciones para poder aprobarse, pero no todos documentos pasan por todas las validaciones ya que no pertenecen a su área, sin patrones al agregar una nueva validación o área se tendría que modificar el código todo el tiempo permitiendo que hallan más errores.
-cada patron aporta muchas cosas por ejemplo el patron Chain of Responsability en donde están cada una de las validaciones y quien debe revisar el documento , en cada validador va a decidir si lo va a procesar o si lo envía al siguiente validador evitando así tener varios if y else que son innecesarios , ahora el patron de State con el que podemos saber en qué estado está el documento ya sea en revisión aprobado o rechazado, dependiendo del estado donde este va a saber que hacer y dar una respuesta a su estado ,para evitar cambiar manualmente el estado cada que modifiquemos el código
+La empresa maneja documentos que deben pasar por varias validaciones secuenciales para poder aprobarse. No todos los documentos pasan por todas las validaciones, ya que dependen de su área correspondiente. Sin patrones, al agregar una nueva validación o área, se tendría que modificar el código existente constantemente, violando el principio de abierto/cerrado e introduciendo errores.
+
+El patrón **Chain of Responsibility** aporta mucho aquí, ya que establece la cadena de validadores y define quién debe revisar el documento; cada validador decide si procesa el documento o lo envía al siguiente, eliminando bloques extensos de `if` y `else`. Complementariamente, el patrón **State** permite gestionar de forma limpia en qué estado está el documento (en revisión, aprobado o rechazado), haciendo que el comportamiento cambie según su estado actual de forma automática.
 
 ### 2. ¿QUE PATRON PODEMOS USAR?
-se podría utilizar Strategy para manejar diferentes formas de aprobación según el tipo de documento ya que algunos si debieran revisar o pasar por todas las áreas, pero el problema principal no consiste en cambiar algoritmos de validación sino en permitir que se valide el documento de forma secuencial y que este cambie de estado según el resultado de cada revisión.
+Se podría utilizar **Strategy** para manejar diferentes formas de aprobación según el tipo de documento (ya que algunos requieren flujos distintos). Sin embargo, el problema principal no consiste en intercambiar algoritmos aislados, sino en permitir que el documento sea validado de forma secuencial y que cambie de estado según el resultado de cada revisión, haciendo que *Chain of Responsibility* combinado con *State* sea la solución idónea.
 
-### 3. CODIGO EJECUTANDO Y DIAGRAMA 
-![ Ejercicio 7  diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%207%20diagrama.png)
-![ Ejercicio 7 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%207%20.png)
+### 3. CODIGO EJECUTANDO Y DIAGRAMA
+![ Ejercicio 7 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%207%20diagrama.png)
+![ Ejercicio 7 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%207%20.png)
 
-# MANUAL IDENTIDAD- EJERCICIO EN CLASE 
-Explicacion de la idea:  Restaurante con tematica de regueton,con diferentes tipos de saclhipapas con nombres de artistas de regueton, tiene una maquina transportadora para recibir la comida ala mesa, contiene tipografia, paleta de colores, publico dirigido.
-LINK CANVA DEL MANUAL: https://canva.link/qt9am63x2rz3zhq
-![ MANUAL DE IDENTIDAD ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/MANUAL%20DE%20IDENTIDAD%20MABEL.png)
+# MANUAL IDENTIDAD - EJERCICIO EN CLASE
+**Explicación de la idea:** Restaurante con temática de reguetón, con diferentes tipos de salchipapas con nombres de artistas del género. Cuenta con una banda transportadora futurista para recibir la comida directamente en la mesa. Contiene tipografía, paleta de colores y público dirigido.
+
+* **LINK CANVA DEL MANUAL:** [Manual en Canva](https://canva.link/qt9am63x2rz3zhq)
+
+![ MANUAL DE IDENTIDAD ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/MANUAL%20DE%20IDENTIDAD%20MABEL.png)
