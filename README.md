@@ -1204,7 +1204,7 @@ La empresa genera reportes, pero usa diferentes formatos como PDF, Exel CVS, cad
 Builder se podría usar si cada reporte tuviera más características como el logo graficas tablas y demás, pero el ejercicio solo menciona un flujo común con pasos ya fijos, también se podría usar strategy ya que así reemplaza el algoritmo según se requiera, pero en este caso témplate define ya una plantilla fija para usar en el algoritmo.
 
 ### 4. CODIGO EJECUTANDO DIAGRAMA
-![ Ejercicio 3 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%203%20diagrama.png)
+![ Ejercicio 3 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%203%20diagrama.png)
 ![ Ejercicio 3 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%203%20.png)
 
 ## Ejercicio 4: Videojuego de Personajes
