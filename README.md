@@ -1166,7 +1166,8 @@ También podemos usar Abstract Factory porque en cada método por país hay vari
 ### 4. JUSTIFICACION DE PATRON SELECCIONADO
 Abstract Factory nos ayuda a gupar los métodos de pago que están relacionados en este caso los de la misma nacionalidad lo que hace que sea escalable cuando existen varios métodos de pago en el mismo país. Pero el patron de method es suficiente ya que solo se necesita crear la estrategia de pago y no varias estrategias con pago facturación y así.
 
-### 5. EJECUCION DEL CODIGO Y DIAGRAMA 
+### 5. EJECUCION DEL CODIGO Y DIAGRAMA
+Hecho en Lucichartd
 ![ Ejercicio 1 diagrama  ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%201%20diagrama.png)
 ![ Ejercicio 1 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%201%20.png)
 
@@ -1186,6 +1187,7 @@ PATRONES USADOS
 Se podría usar strategy para crear el algoritmo a cada clase de correo wpp y de más, porque Factory solo crea los objetos, pero no avisa automáticamente, y Observer se crea la automatización ero igual toca hacerlo manualmente por eso ese solo patron no sirve.
 
 ### 4. EJECUCION CODIGO Y DIAGRAMA 
+Hecho en Lucichartd
 ![ Ejercicio 2 diagrama](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%202%20diagrama.png)
 
 ![ Ejercicio 2 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%202%20.png
@@ -1204,6 +1206,7 @@ La empresa genera reportes, pero usa diferentes formatos como PDF, Exel CVS, cad
 Builder se podría usar si cada reporte tuviera más características como el logo graficas tablas y demás, pero el ejercicio solo menciona un flujo común con pasos ya fijos, también se podría usar strategy ya que así reemplaza el algoritmo según se requiera, pero en este caso témplate define ya una plantilla fija para usar en el algoritmo.
 
 ### 4. CODIGO EJECUTANDO DIAGRAMA
+Hecho en Lucichartd
 ![ Ejercicio 3 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/blob/feature/semana-3-mabel/evidencias/ejercicio%203%20diagrama.png)
 ![ Ejercicio 3 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%203%20.png)
 
@@ -1220,6 +1223,7 @@ Cada tipo de jugador en el juego tiene la capacidad de mejorar conforme va pasan
 Se podría usar **Composite** ya que crearíamos personajes a partir de otros componentes organizados de forma jerárquica o encapsulados en clases generales (por ejemplo: espada, escudo y armadura pertenecen a una clase general llamada *Equipamiento*). Así podríamos tratar tanto a los grupos completos como a los elementos individuales de la misma forma. Sin embargo, como el juego no se estructura tanto en forma de árbol sino que requiere ir agregando características a medida que se necesiten, **Decorator** es la opción ideal.
 
 ### 4. CODIGO EJECUTANDO Y DIAGRAMA
+Hecho en Lucichartd
 ![ Ejercicio 4 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
 ![ Ejercicio 4 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%204%20diagrama.png)
 
@@ -1236,6 +1240,7 @@ Si no usamos patrones, se tendría que modificar directamente el sistema antiguo
 Se podría utilizar el patrón **Bridge**, ya que ayuda a separar las funcionalidades principales de la forma en que se implementan. Sin embargo, en este ejercicio el problema principal es conectar un sistema bancario antiguo con uno moderno sin tener que modificar el sistema existente. Por eso **Adapter** resulta más adecuado al actuar como un intermediario directo entre ambos, mientras que **Facade** complementa ayudando a simplificar el uso del sistema complejo ofreciendo una interfaz más sencilla para el usuario.
 
 ### 4. CODIGO EJECUTANDO Y DIAGRAMA
+Hecho en Lucichartd
 ![ Ejercicio 5 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%205%20diagrama.png)
 ![ Ejercicio 5 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%205.png)
 
@@ -1250,6 +1255,7 @@ El patrón **Strategy** encapsula cada algoritmo para poder recomendar el conten
 Se podría evaluar el patrón **Chain of Responsibility** para que el algoritmo pase secuencialmente por género, popularidad, historial, etc., derivando el flujo al siguiente eslabón. Sin embargo, esta solución no es la mejor porque el usuario selecciona un único tipo de recomendación según sus preferencias actuales. Los algoritmos son independientes y la validación o resultado de uno no debería afectar ni depender del otro.
 
 ### 4. CODIGO EJECUTANDO Y DIAGRAMA
+Hecho en Lucichartd
 ![ Ejercicio 6 diagrama ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejercicio%206%20diagrama.png)
 ![ Ejercicio 6 ](https://github.com/MabelBernalAmaya/DOSW_BITACORA/raw/feature/semana-3-mabel/evidencias/ejecucion%20ejercicio%206%20.png)
 
